@@ -22,7 +22,7 @@ describe('Should test at a function level', () => {
             body:{
                 nome: 'Conta Via RestAPI 1'
             }
-        }).as('response')   //.then(resp => console.log(resp)) // isso ñ é o bastante,  o teste precisa fazer sua propria checagem
+        }).as('response')   //.then(resp => console.log(resp)) // isso ñ é o bastante,  //o teste precisa fazer sua propria checagem
         cy.get('@response').then(resp => {
             expect(resp.status).to.be.equal(201)
             expect(resp.body).to.have.property('id')
